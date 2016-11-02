@@ -66,7 +66,10 @@ OK
 Example
 -
 
-This is an example of what your runs should look like:
+This is an example of what your runs should look like (TP is "Train
+Probability"; HP is "Heldout Probability"; TA is "Train Accuracy"; HA
+is "Heldout Accuracy"):
+
 ```
 cs244-33-dhcp:logreg jbg$ python logreg.py
 Read in 1064 train and 133 test
