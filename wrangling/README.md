@@ -9,6 +9,8 @@ This homework focuses on the first steps of getting data into a usable
 form to start asking very simple questions.  We'll start asking more
 complicated questions very soon!
 
+The data for this assignment are messy.  Part of this assignment is learning how to deal with this messiness.  You're not allowed to change the underlying data, but you may have to resort to hacks to resolve issues with the data.
+
 This homework should not be very difficult if you can program in
 Python.  If this homework is particularly challenging, you may not
 have enough of a programming background for the course and need to
@@ -130,6 +132,8 @@ upload.
 
 Hints
 -----------------------
-* Only consider elections for the 114th congress.  Ignore primaries and special elections for unexpired terms.
+* Only consider general elections for the 114th congress.  Ignore primaries and special elections for unexpired terms.
 * The file may have errors.  For the purposes of this assignment, you are not allowed to edit the source data.  This may result in you having to resort to dirty hacks.
-* Different states handle party affiliations differently.
+* You will need to understand the file to understand what's going on.  This is part of the assignment.  Wikipedia is your friend.
+* Different states handle party affiliations differently.  Don't assume that if your code works for one state, it will work for all states.  
+* Make sure you have the correct number of districts in your output file.  There are 438 voting districts, plus a handful of non-voting districts.
