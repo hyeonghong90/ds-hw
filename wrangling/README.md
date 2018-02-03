@@ -9,17 +9,23 @@ This homework focuses on the first steps of getting data into a usable
 form to start asking very simple questions.  We'll start asking more
 complicated questions very soon!
 
-The data for this assignment are messy.  Part of this assignment is learning how to deal with this messiness.  You're not allowed to change the underlying data, but you may have to resort to hacks to resolve issues with the data.
+The data for this assignment are messy.  Part of this assignment is
+learning how to deal with this messiness.  You're not allowed to
+change the underlying data, but you may have to resort to hacks to
+resolve issues with the data.
 
 This homework should not be very difficult if you can program in
 Python.  If this homework is particularly challenging, you may not
 have enough of a programming background for the course and need to
 quickly get up to speed or consider another course.
 
-This program will be autograded.  That means that it's important to
-not change function names and to not add additional functionality that
-may improve the program but produce different results.  Make sure that
-your unit tests pass.  This what a successful set of unit tests will
+You do not have to use the functions provided in the template file if
+you feel they are not helpful to you.  However, you must produce the
+CSV file exactly as this program does to submit to Kaggle.  If you do
+use the functions provided in the template file, you want to make
+sure the unit tests pass.
+
+This what a successful set of unit tests will
 look like:
 
     $ python3 tests.py
@@ -29,10 +35,12 @@ look like:
     
     OK
 
-If you do not get this result from running the tests, you will not get
-a good grade.  Be sure to also look at the test file carefully, as it
-will give you examples of how the functions you need to implement are
-supposed to work.
+If you do not get this result from running the tests and you use the
+functions provided, you will not get a good grade.  The converse is
+not true; passing all unit tests is not sufficient to getting a good
+grade.  It just means you're on the right track.  Be sure to also look
+at the test file carefully, as it will give you examples of how the
+functions you need to implement are supposed to work.
 
 As with all our homeworks, we will distribute the code via git.  You
 are strongly encouraged to clone the repository so that if there are
@@ -50,10 +58,11 @@ In the US, our legislature is made up of representatives of individual
 these districts are competitive, meaning that the winner of the
 election is not a "sure thing" based on the voters in the districts.
 However, for a variety of reasons, many of these districts are not
-very competitive.  We're going to look at the 2014 election for the 114th congress and see
-which districts are competitive.  This also gives us a chance to play
-around with some continuous data (well, sort of; we'll assume votes
-are continuous even though you can't have a fractional vote).
+very competitive.  We're going to look at the 2014 election for the
+114th congress and see which districts are competitive.  This also
+gives us a chance to play around with some continuous data (well, sort
+of; we'll assume votes are continuous even though you can't have a
+fractional vote).
 
 You will output to a file with the districts sorted by how competitive
 they are (with the most competitive districts first).  If an election
@@ -91,27 +100,7 @@ To complete this assignment you'll need to complete three functions:
 
 You should not need to modify the "main" function.
 
-Words Presidents Use (15 points)
--------------------------------
-
-Each year, the president of the United States is required to make a
-speech to congress describing the "State of the Union".  You will
-count the most frequent words in all of the past addresses (we'll do
-more interesting things with this later).
-
-We've placed all of these in a zip file, with each speech as a
-separate fill inside the zip archive.  To complete this assignment,
-you'll need to go through each of the files, find the words, and then
-sum them up.  This has been broken down into three functions you'll
-need to complete:
-* text_from_zipfile
-* words
-* accumulate_counts
-
-We define a word as four or more contiguous characters in the range
-a-z or A-Z.  The resulting words should be lower case.  This removes
-punctuation, short words, and other distracting information from the
-files.
+Submit your CSV file to Kaggle and it will score how well you did.
 
 Writeup (10 points)
 -----------------------
@@ -125,9 +114,9 @@ plain ASCII text file) that explains:
 Submitting Your Code
 -----------------------
 
-You'll need to submit your assignment (word_counts.py, districts.py,
+You'll need to submit your assignment (districts.py,
 and writeup.txt) on
-[Moodle](https://moodle.cs.colorado.edu/course/view.php?id=49) as an
+[ELMS](https://umd.instructure.com/courses/1239622) as an
 upload.
 
 Hints
