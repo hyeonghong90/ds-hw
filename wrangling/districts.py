@@ -2,7 +2,7 @@ from collections import defaultdict
 from csv import DictReader, DictWriter
 import heapq
 
-kHEADER = ["STATE", "DISTRICT", "MARGIN"]
+kHEADER = ["DISTRICT", "MARGIN"]
 
 def district_margins(state_lines):
     """
@@ -45,11 +45,23 @@ if __name__ == "__main__":
     output.writeheader()
 
     summary = {}
-    for state in all_states(lines):
-        margins = district_margins(all_state_rows(lines, state))
+    with open("train.csv", 'w') as train_file, \
+         open("sub.csv", 'w') as sub_file:
+      train = DictWriter(train_file, fieldnames=kHEADER)
+      key = DictWriter(sub_file, fieldnames=kHEADER)
+    
+      train.writeheader()
+      key.writeheader()
+
+      for state in all_states(lines):
+        state_districts = list(all_state_rows(lines, state))
+        margins = district_margins(state_districts)
 
         for ii in margins:
             summary[(state, ii)] = margins[ii]
 
-    for ii, mm in sorted(summary.items(), key=lambda x: x[1]):
-        output.writerow({"STATE": ii[0], "DISTRICT": ii[1], "MARGIN": mm})
+      for ii, mm in sorted(summary.items(), key=lambda x: x[1]):
+        if ii[0] in ["Texas", "Arizona", "Maryland"]:
+            train.writerow({"DISTRICT": "%s %i" % (ii[0], ii[1]), "MARGIN": mm})
+        else:
+            key.writerow({"DISTRICT": "%s %i" % (ii[0], ii[1]), "MARGIN": mm})

@@ -100,7 +100,7 @@ To complete this assignment you'll need to complete three functions:
 
 You should not need to modify the "main" function.
 
-Submit your CSV file to Kaggle and it will score how well you did.
+Submit your CSV file to [https://www.kaggle.com/c/2018-414-wrangling Kaggle] and it will score how well you did.
 
 Writeup (10 points)
 -----------------------
